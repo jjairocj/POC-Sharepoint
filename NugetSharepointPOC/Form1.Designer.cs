@@ -49,6 +49,7 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.lblServerDesc = new System.Windows.Forms.Label();
             this.textBoxLog = new System.Windows.Forms.TextBox();
+            this.rb2007 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -57,7 +58,7 @@
             // rb2010
             // 
             this.rb2010.AutoSize = true;
-            this.rb2010.Location = new System.Drawing.Point(16, 19);
+            this.rb2010.Location = new System.Drawing.Point(25, 54);
             this.rb2010.Name = "rb2010";
             this.rb2010.Size = new System.Drawing.Size(49, 17);
             this.rb2010.TabIndex = 1;
@@ -69,7 +70,7 @@
             // rb2013
             // 
             this.rb2013.AutoSize = true;
-            this.rb2013.Location = new System.Drawing.Point(16, 42);
+            this.rb2013.Location = new System.Drawing.Point(25, 77);
             this.rb2013.Name = "rb2013";
             this.rb2013.Size = new System.Drawing.Size(49, 17);
             this.rb2013.TabIndex = 2;
@@ -81,7 +82,7 @@
             // rbOnlineTest
             // 
             this.rbOnlineTest.AutoSize = true;
-            this.rbOnlineTest.Location = new System.Drawing.Point(16, 88);
+            this.rbOnlineTest.Location = new System.Drawing.Point(25, 123);
             this.rbOnlineTest.Name = "rbOnlineTest";
             this.rbOnlineTest.Size = new System.Drawing.Size(79, 17);
             this.rbOnlineTest.TabIndex = 3;
@@ -93,7 +94,7 @@
             // rbOnlineBizagi
             // 
             this.rbOnlineBizagi.AutoSize = true;
-            this.rbOnlineBizagi.Location = new System.Drawing.Point(16, 111);
+            this.rbOnlineBizagi.Location = new System.Drawing.Point(25, 146);
             this.rbOnlineBizagi.Name = "rbOnlineBizagi";
             this.rbOnlineBizagi.Size = new System.Drawing.Size(86, 17);
             this.rbOnlineBizagi.TabIndex = 4;
@@ -137,14 +138,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rb2007);
             this.groupBox1.Controls.Add(this.rb2016);
             this.groupBox1.Controls.Add(this.rb2010);
             this.groupBox1.Controls.Add(this.rb2013);
             this.groupBox1.Controls.Add(this.rbOnlineBizagi);
             this.groupBox1.Controls.Add(this.rbOnlineTest);
-            this.groupBox1.Location = new System.Drawing.Point(45, 53);
+            this.groupBox1.Location = new System.Drawing.Point(45, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(226, 151);
+            this.groupBox1.Size = new System.Drawing.Size(226, 192);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sharepoint Versions:";
@@ -152,7 +154,7 @@
             // rb2016
             // 
             this.rb2016.AutoSize = true;
-            this.rb2016.Location = new System.Drawing.Point(16, 65);
+            this.rb2016.Location = new System.Drawing.Point(25, 100);
             this.rb2016.Name = "rb2016";
             this.rb2016.Size = new System.Drawing.Size(49, 17);
             this.rb2016.TabIndex = 5;
@@ -271,6 +273,18 @@
             this.textBoxLog.Size = new System.Drawing.Size(342, 471);
             this.textBoxLog.TabIndex = 14;
             // 
+            // rb2007
+            // 
+            this.rb2007.AutoSize = true;
+            this.rb2007.Location = new System.Drawing.Point(25, 31);
+            this.rb2007.Name = "rb2007";
+            this.rb2007.Size = new System.Drawing.Size(49, 17);
+            this.rb2007.TabIndex = 6;
+            this.rb2007.TabStop = true;
+            this.rb2007.Text = "2007";
+            this.rb2007.UseVisualStyleBackColor = true;
+            this.rb2007.CheckedChanged += new System.EventHandler(this.rb2007_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +330,7 @@
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxLog;
+        private System.Windows.Forms.RadioButton rb2007;
     }
 }
 

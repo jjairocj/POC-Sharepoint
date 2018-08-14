@@ -121,7 +121,7 @@ namespace NugetSharepointPOC
         private void Connect()
         {
             _ctx = new ClientContext(_siteCollectionUrl);
-            if (rb2010.Checked || rb2013.Checked || rb2016.Checked)
+            if (rb2007.Checked || rb2010.Checked || rb2013.Checked || rb2016.Checked)
             {
                 var nt = new NetworkCredential(_userName, _password);
                 _ctx.Credentials = nt;
@@ -190,6 +190,22 @@ namespace NugetSharepointPOC
             _siteCollectionUrl = "https://testyz.sharepoint.com/";
             _userName = "michael@testyz.onmicrosoft.com";
             _password = @"Modeler!""#";
+            UpdateLoginInfo();
+        }
+
+        private void rb2007_CheckedChanged(object sender, EventArgs e)
+        {
+            _siteCollectionUrl = "http://sharepoint2007/sitios/TestingSharepoint";
+            _userName = @"SHAREPOINT\Administrator";
+            _password = "Bizagi2018";
+            UpdateLoginInfo();
+        }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            //Sharepoint 2016
+            _siteCollectionUrl = "http://win-0nfiqiub1b1/sites/Sharepoint2016";
+            _userName = @"SHAREPOINT\Administrator";
+            _password = "Bizagi2018";
             UpdateLoginInfo();
         }
 
@@ -287,14 +303,7 @@ namespace NugetSharepointPOC
             //}
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            //Sharepoint 2016
-            _siteCollectionUrl = "http://win-0nfiqiub1b1/sites/Sharepoint2016";
-            _userName = @"SHAREPOINT\Administrator";
-            _password = "Bizagi2018";
-            UpdateLoginInfo();
-        }
+ 
 
         private void rbOnlineBizagi_CheckedChanged(object sender, EventArgs e)
         {
@@ -557,6 +566,8 @@ namespace NugetSharepointPOC
 
             treeFolders.ExpandAll();
         }
+
+        
     }
 }
 
